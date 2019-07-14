@@ -1,4 +1,4 @@
-<h1 align="center">K-means visualization</h1>
+<h1>K-means visualization</h1>
 <p>
   <img src="https://img.shields.io/badge/version-0.9-blue.svg?cacheSeconds=2592000" />
   <a href="https://twitter.com/SandroMaglione">
