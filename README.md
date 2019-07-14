@@ -6,15 +6,13 @@
   </a>
 </p>
 
-## Install
+## Screen
 
-```sh
-npm install
-```
+![How the page looks like](https://www.sandromaglione.com/images/k-means-screen.png)
 
 ## Author
 
-👤 **Sandro Maglione**
+**Sandro Maglione**
 
 * Twitter: [@SandroMaglione](https://twitter.com/SandroMaglione)
 * Github: [@SandroMaglione](https://github.com/SandroMaglione)
@@ -22,6 +20,3 @@ npm install
 ## Show your support
 
 Give a ⭐️ if this project helped you!
-
-***
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
