@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,700&display=swap" rel="stylesheet">
+
+    <script src="./utils/Utils.js" defer></script>
+    <script src="./objects/Pointer.js" defer></script>
+    <script src="./objects/Center.js" defer></script>
+    <script src="./generators/Generator.js" defer></script>
+    <script src="./index.js" defer></script>
+    <script src="./utils/Output.js" defer></script>
+    <style type="text/css">
+        canvas {
+            background: rgba(0, 0, 0, 0.01);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            /* bring your own prefixes */
+            transform: translate(-50%, -50%);   
+        }
+        html, body, * { padding: 0; margin: 0; font-family: 'Roboto Mono', monospace; }
+        html, body { background: #111; }
+        #menu {
+            position: fixed;
+            left: 2.4rem;
+            top: 2rem;
+            color: #fff;
+        }
+        #results {
+            display: none;
+        }
+        #settings {}
+        #settings input, #settings button {
+            background: transparent;
+            outline: none;
+            border: none;
+            color: #fff;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+        #settings button {
+            margin-top: 1rem;
+        }
+        #results span {
+            font-weight: bold;
+        }
+        #menu .label {
+            font-weight: 300;
+        }
+    </style>
+    <title>K-means</title>
+</head>
+<body>
+    <div class="canvas-container">
+        <canvas id="k-means" width="400" height="400"></canvas>
+    </div>
+
+    <div id="menu">
+        <div id="settings">
+            <div class="container">
+                <span class="label">Animation speed</span>
+                <input type="number" step="10" max="3000" min="10" value="50" id="animationSpeed" />
+            </div>
+            <div class="container">
+                <span class="label">Cycles</span>
+                <input type="number" step="1" max="1000" min="1" value="10" id="cycles" />
+            </div>
+            <div class="container">
+                <span class="label">Pointers</span>
+                <input type="number" step="1" max="50000" min="1" value="1000" id="pointers" />
+            </div>
+            <div class="container">
+                <span class="label">Centers</span>
+                <input type="number" step="1" max="3000" min="1" value="3" id="centers" />
+            </div>
+            <div class="container">
+                <button id="start">START</button>
+            </div>
+        </div>
+        <div id="results">
+            <div class="container">
+                <span class="label">Distance</span>
+                <span id="totDis"></span>
+            </div>
+            <div class="container">
+                <span class="label">Distance variance</span>
+                <span id="totDisVar"></span>
+            </div>
+            <div class="container">
+                <span class="label">Steps</span>
+                <span id="totStp"></span>
+            </div>
+            <div class="container">
+                <span class="label">Steps / Distance</span>
+                <span id="totDisStp"></span>
+            </div>
+            <div class="container">
+                <span class="label">Cycles left</span>
+                <span id="curCycle"></span>
+            </div>
+            <div class="container">
+                <a id="download">DOWNLOAD</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
