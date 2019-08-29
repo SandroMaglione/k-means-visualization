@@ -10,7 +10,7 @@ Javascript page that displays **graphically** the various step of a **k-means al
 
 **[Try it Out](http://www.sandromaglione.com/k-means/)**
 
-![How the page looks like](https://www.sandromaglione.com/images/k-means_screen.png)
+![How the page looks like](https://www.sandromaglione.com/images/k-means-screen.png)
 
 
 
